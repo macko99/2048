@@ -4,7 +4,7 @@ class Main {
 
     public static void main(String[] args) {
         JFrame game = new JFrame();
-        game.setTitle("2048 - Nowa gra");
+        game.setTitle("2048 - Zagraj!");
         game.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         game.setSize(350, 420);
         game.setResizable(false);

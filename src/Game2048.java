@@ -17,7 +17,6 @@ class Game2048 extends JPanel {
         painter = new Painter(this);
         setPreferredSize(new Dimension(350, 420));
         setFocusable(true);
-
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -68,15 +67,12 @@ class Game2048 extends JPanel {
         for (int i = 0; i < 4; i++) {
             Square[] line = getLine(direction, i);
             Square[] merged = mergeLine(moveLine(line));
-
             if (!Arrays.equals(line, merged)) {
                 setLine(direction, i, merged);
-
                 if (!needAddTile)
                     needAddTile = true;
             }
         }
-
         if (needAddTile)
             addSquare();
     }
@@ -176,7 +172,7 @@ class Game2048 extends JPanel {
                 score += oldLine[i].getValue() * 2;
                 i++;
                 newLine.add(new Square(oldLine[i].getValue() * 2));
-                if (oldLine[i].getValue() * 2 == 2048) {
+                if (oldLine[i].getValue() * 2 == 16) {
                     status = GameStatus.WON;
                 }
             } else {

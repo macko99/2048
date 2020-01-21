@@ -172,7 +172,7 @@ class Game2048 extends JPanel {
                 score += oldLine[i].getValue() * 2;
                 i++;
                 newLine.add(new Square(oldLine[i].getValue() * 2));
-                if (oldLine[i].getValue() * 2 == 16) {
+                if (oldLine[i].getValue() * 2 == 2048) {
                     status = GameStatus.WON;
                 }
             } else {
